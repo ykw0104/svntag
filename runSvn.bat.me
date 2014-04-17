@@ -1,0 +1,11 @@
+@echo off
+rem do copy
+echo delete %2-tag-%3-sit
+svn delete file:///D:/WorkSpace/svn/ilsmp/%1/code/%2/devtags/%2-tag-%3-sit ^
+	-m 'delete'
+echo copy  %2-tag-%3-lt to %2-tag-%3-sit
+svn copy ^
+	file:///D:/WorkSpace/svn/ilsmp/%1/code/%2/devtags/%2-tag-%3-lt ^
+	file:///D:/WorkSpace/svn/ilsmp/%1/code/%2/devtags/%2-tag-%3-sit ^
+	-m 'copy'
+echo -------------------------------------------------------
